@@ -8,7 +8,6 @@ const verityToken =(req, res, next)=>{
     res.status(403) 
   }
   jwt.verify(token, process.env.SECRET_KEY,(err, doc)=>{
-    
     if(doc){
       next()
     }else{
